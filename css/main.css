@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+
+:root {
+  --color-1: #6b7082;
+  --color-2: #2e3349;
+  --color-3: #ffffff;
+  --color-4: #19a1ae;
+  --color-5: #41cbd3;
+  --color-6: #e8e9ec;
+}
+
+:root {
+  --text-heading: 700 1.125rem / 1.2 'Kumbh Sans', sans-serif;
+  --text-age: 400 1.125rem / 1.2 'Kumbh Sans', sans-serif;
+  --text-location: 400 0.875rem / 1.2 'Kumbh Sans', sans-serif;
+  --text-stat-type: 400 0.625rem / 1 'Kumbh Sans', sans-serif;
+}
+
+/* css reset begins */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  width: 100vw;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* css reset ends */
+
+/* selector css */
+
+body {
+  background-color: var(--color-4);
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+}
+
+hr {
+  background-color: var(--color-6);
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+
+/* class css */
+
+.attribution {
+  display: none;
+}
+
+.bg-pattern-top {
+  position: absolute;
+  left: -840px;
+  max-height: none;
+  max-width: none;
+  top: -660px;
+  z-index: 0;
+}
+
+.bg-pattern-bottom {
+  position: absolute;
+  left: 144px;
+  max-height: none;
+  max-width: none;
+  top: 210px;
+  z-index: 0;
+}
+
+.card {
+  background-color: var(--color-3);
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 374px;
+  place-content: end;
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+}
+
+.card::before {
+  content: '';
+  background-image: url('../assets/images/bg-pattern-card.svg');
+  background-size: stretch;
+  height: 140px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.card-container {
+  box-shadow: 0 50px 100px -20px #08465e80;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 374px;
+  position: relative;
+  width: 350px;
+  z-index: 1;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  place-items: center;
+  place-content: center;
+  z-index: 3;
+}
+
+.user-info img {
+  border-radius: 50%;
+  border: 5px solid var(--color-3);
+}
+
+.user-name {
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: center;
+  gap: 0.5rem;
+}
+
+.user-name h1 {
+  font: var(--text-heading);
+}
+
+.user-name h1 span {
+  margin-left: 0.5rem;
+  font: var(--text-age);
+  color: var(--color-1);
+}
+
+.user-name p {
+  font: var(--text-location);
+  color: var(--color-1);
+}
+
+.user-stats {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  padding: 1.5rem;
+  place-content: space-around;
+  width: 100%;
+}
+
+.user-stats-item {
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: center;
+  gap: 0.5rem;
+}
+
+.user-stats-item data {
+  font: var(--text-heading);
+  color: var(--color-2);
+}
+
+.user-stats-item p {
+  color: var(--color-1);
+  font: var(--text-stat-type);
+  letter-spacing: 1.5px;
+}
